@@ -13,6 +13,7 @@ final int intro = 1;
 final int game = 2;
 final int pause = 3;
 final int gameover = 4;
+final int options = 5;
 
 //target variables
 float x1, y2, d;
@@ -20,7 +21,12 @@ int x, y, w, h;
 float vx, vy;
 int score, lives;
 //colors
-
+color wood = #947F6E;
+color taupe = #534C46;
+color pearl = #303030;
+color rose = #46050D;
+color crimson = #660510;
+color auburn = #A12D2D;
 
 // sound
 Minim minim;
@@ -57,7 +63,6 @@ void setup() {
 
 void draw() {
 
-
   if (mode == intro) {
     intro();
   } else if (mode == game) {
@@ -66,6 +71,8 @@ void draw() {
     pause();
   } else if (mode == gameover) {
     gameover();
+  } else if (mode == options) {
+    options();
   } else {
     println("Error; Mode = " + mode);
   }

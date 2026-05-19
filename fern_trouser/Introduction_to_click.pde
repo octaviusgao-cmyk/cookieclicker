@@ -3,19 +3,28 @@ void intro() {
   theme.play();
   
   
-  background(255, 0, 0);
+  background(auburn);
 
 
-  fill(255);
+  fill(taupe);
   stroke(0);
   tactile(x, y, w, h);
   rect(x, y, w, h);
+  
+  fill(taupe);
+  stroke(0);
+  tactile(x, y+200, w, h);
+  rect(x, y + 200, w, h);
 
-  fill(0);
-  textSize(75);
-  text("Start", 450, 500);
+  fill(pearl);
+  textSize(40);
+  text("Commence", 450, 500);
+  
+  fill(pearl);
+  textSize(40);
+  text("Brief files", 450, 700);
 
-  fill(255);
+  fill(pearl);
   textSize(80);
   text("Operation Snake Eater", 450, 200);
 }
@@ -29,8 +38,10 @@ void introClicks() {
     y2 = width/2;
     
   }
+  if (mouseX > 350 && mouseX < 750 && mouseY < 750 && mouseY > 650) {
+    mode = options;
+  }
 }
-
 void tactile(int x, int y, int w, int h) {
   if (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h) {
     stroke(255);
