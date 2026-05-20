@@ -12,3 +12,7 @@ void mouseReleased() {
     optionsClicks();
   }
 }
+
+void mouseDragged() {
+  slider();
+}

@@ -28,6 +28,17 @@ color rose = #46050D;
 color crimson = #660510;
 color auburn = #A12D2D;
 
+//slider
+
+float sliderX;
+float r;
+float sizeX;
+float sizeY;
+//pictures
+PImage snake;
+PImage foxhound;
+boolean snakeon;
+boolean foxhoundon;
 // sound
 Minim minim;
 AudioPlayer fail, success, theme, alert;
@@ -36,6 +47,11 @@ void setup() {
   size(900, 900);
   mode = intro;
   textAlign(CENTER, CENTER);
+  
+  snake = loadImage("snake.png");
+  foxhound = loadImage("foxhound.png");
+  
+  sliderX = 250;
 
   x1 = height/2;
   y2 = width/2;
