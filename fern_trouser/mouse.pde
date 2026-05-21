@@ -14,5 +14,7 @@ void mouseReleased() {
 }
 
 void mouseDragged() {
-  slider();
+  if (mode == options) {
+    slider();
+  }
 }

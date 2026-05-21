@@ -11,7 +11,7 @@ void game() {
   pause2();
 
   target();
-
+  println(snaketype, circle);
 
   x1 = x1 + vx;
   y2 = y2 + vy;
@@ -45,9 +45,11 @@ void gameClicks() {
 }
 
 void target() {
+
   fill(rose);
   stroke(0);
-  circle(x1, y2, d);
+  circle(x1, y2, circle);
+  snaketype(x1, y2);
 }
 
 void pause2() {

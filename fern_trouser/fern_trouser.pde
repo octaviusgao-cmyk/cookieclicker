@@ -20,6 +20,9 @@ float x1, y2, d;
 int x, y, w, h;
 float vx, vy;
 int score, lives;
+float circle;
+int snaketype;
+
 //colors
 color wood = #947F6E;
 color taupe = #534C46;
@@ -47,6 +50,7 @@ void setup() {
   size(900, 900);
   mode = intro;
   textAlign(CENTER, CENTER);
+  imageMode(CENTER);
   
   snake = loadImage("snake.png");
   foxhound = loadImage("foxhound.png");
@@ -56,10 +60,14 @@ void setup() {
   x1 = height/2;
   y2 = width/2;
   d = 100;
+  circle = 100;
 
   score = 0;
   lives = 3;
 
+  snaketype = 1;
+
+  
   //minim 
   minim = new Minim(this);
   theme = minim.loadFile("invisible.mp3");
