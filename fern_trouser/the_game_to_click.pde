@@ -11,7 +11,7 @@ void game() {
   pause2();
 
   target();
-  println(snaketype, circle);
+
 
   x1 = x1 + vx;
   y2 = y2 + vy;

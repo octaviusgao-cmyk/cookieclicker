@@ -35,8 +35,9 @@ void options() {
   circle(sliderX, 600, 50);
 
   //indicator
-  circle(460, 450, circle);
-  snaketype(460, 450);
+  noStroke();
+  circle(center, center, circle);
+  snaketype(center, center);
 }
 
 void optionsClicks() {
@@ -61,8 +62,8 @@ void slider() {
     sliderX = mouseX;
   }
   circle = map(sliderX, 350, 450, 50, 100);
-  sizeY = map(sliderX, 250, 700, 450, 450);
-  sizeX = map(sliderX, 250, 700, 450, 450);
+  sizeY = map(sliderX, 350, 450, 40, 90);
+  sizeX = map(sliderX, 350, 450, 40, 90);
   popMatrix();
 }
 
@@ -77,9 +78,9 @@ void sliderTactile() {
 
 void snaketype(float x, float y) {
   if (snaketype == 1) {
-    image(snake, x, y, circle - 40, circle - 40);
+    image(snake, x, y, sizeX, sizeY);
   }
   if (snaketype == 2) {
-    image(foxhound, x - 10, y, circle - 40, circle - 40);
+    image(foxhound, x, y, sizeX, sizeY);
   }
 }

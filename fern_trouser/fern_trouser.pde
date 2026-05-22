@@ -22,6 +22,8 @@ float vx, vy;
 int score, lives;
 float circle;
 int snaketype;
+int highScore;
+int center;
 
 //colors
 color wood = #947F6E;
@@ -64,9 +66,12 @@ void setup() {
 
   score = 0;
   lives = 3;
+  
+  highScore = 0;
 
   snaketype = 1;
 
+  center = 450;
   
   //minim 
   minim = new Minim(this);
