@@ -16,10 +16,10 @@ void game() {
   x1 = x1 + vx;
   y2 = y2 + vy;
 
-  if (x1 < 50 || x1 > width-50) {
+  if (x1 < circle/2 || x1 > width-circle/2) {
     vx = vx * -1;
   }
-  if (y2 < 50 || y2 > width-50) {
+  if (y2 < circle/2 || y2 > width-circle/2) {
     vy = vy * -1;
   }
 }
@@ -27,7 +27,7 @@ void game() {
 void gameClicks() {
   //mode = gameover;
 
-  if (dist(mouseX, mouseY, x1, y2) < d/2) {
+  if (dist(mouseX, mouseY, x1, y2) < circle/2) {
     score = score +1;
     success.rewind();
     success.play();
